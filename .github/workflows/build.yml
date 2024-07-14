@@ -34,7 +34,7 @@ jobs:
         run: ./gradlew build --stacktrace --debug
       
       - name: Gradle Build
-        uses: gradle/actions/setup-gradle@v3
+        uses: gradle/actions/setup-gradle@v3.4.2
         env:
           GITHUB_TOKEN: ${{ secrets.token }}
         with:

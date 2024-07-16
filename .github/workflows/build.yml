@@ -42,7 +42,7 @@ jobs:
 
 
       - name: Build with Gradle
-        run: ./gradlew <android:run> --stacktrace --debug
+        run: ./gradlew <android:run> assembleDebug --stacktrace --debug
           
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew

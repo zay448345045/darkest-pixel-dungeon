@@ -49,7 +49,7 @@ jobs:
 
       - name: Build with Gradle
         # <android:run>
-        run:  ./gradlew  assembleDebug --stacktrace #--debug
+        run:  ./gradlew build --stacktrace #--debug
 #        env:
 #          GITHUB_TOKEN: ${{ secrets.token }}
       - name: Upload APK

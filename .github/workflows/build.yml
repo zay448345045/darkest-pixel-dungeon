@@ -22,8 +22,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Branch name
-        run: echo running on branch ${GITHUB_master}#REF##*/
+#      - name: Branch name
+ #       run: echo running on branch ${GITHUB_master}#REF##*/
       # uses: fwilhe2/setup-kotlin@main
       - name: Setup Java
         uses: actions/setup-java@v4

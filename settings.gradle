@@ -1,3 +1,2 @@
 include ':SPD-classes'
 include ':core'
-include ':android'

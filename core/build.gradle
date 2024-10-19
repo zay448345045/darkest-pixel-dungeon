@@ -29,6 +29,7 @@ android {
     lintOptions {
         checkReleaseBuilds false
     }
+    ndkVersion '26.1.10909125'
 
 }
 

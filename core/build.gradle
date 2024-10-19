@@ -5,12 +5,12 @@ apply plugin: 'kotlinx-serialization'
 
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 34 //27
 //    buildToolsVersion "27.0.3"
 
     defaultConfig {
         minSdkVersion 15
-        targetSdkVersion 23
+        targetSdkVersion 34 //23
     }
 
     buildTypes {

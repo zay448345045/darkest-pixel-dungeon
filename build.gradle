@@ -4,16 +4,18 @@ buildscript {
    ext.kotlin_version = '2.0.20'
 
     repositories {
+maven
 mavenCentral()
 google()
         
-        maven { url 'https://oss.sonatype.org/content/repositories/snapshots'}
+
+        mavenCentral { url 'https://oss.sonatype.org/content/repositories/snapshots'}
         
-    maven { url 
+    google { url 
 "https://plugins.gradle.org/m2/"}
     
 
-
+/*
 maven { url         "https://dl.google.com/dl/android/maven2/"}
 
 
@@ -47,7 +49,7 @@ allowInsecureProtocol = true
 //warning and notice . aliyun mirror does not have new plug-in versions.
 
 
-
+*/
 
 }
 
@@ -74,13 +76,16 @@ classpath 'com.android.tools.build:gradle:8.6.1'
 allprojects {
     repositories {
 
+maven()
 google()
         mavenCentral()
-        maven { url 'https://oss.sonatype.org/content/repositories/snapshots'
+        mavenCentral { url 'https://oss.sonatype.org/content/repositories/snapshots'
  }
-maven { url         "https://dl.google.com/dl/android/maven2/"}
+google { url         "https://dl.google.com/dl/android/maven2/"}
 
 
+
+/*
 maven { url         "https://repo.maven.apache.org/maven2/"}
 
 
@@ -105,7 +110,7 @@ maven { url
             allowInsecureProtocol = true
 //warning and notice . aliyun mirror does not have new plug-in versions.
 
-        
+*/        
         }
     }
 }

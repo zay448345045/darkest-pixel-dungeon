@@ -5,6 +5,9 @@ apply plugin: 'kotlinx-serialization'
 
 
 android {
+namespace "com.egoal.darkestpixeldungeon" // 替换成你的包名
+    // ...其他配置
+ //   package="com.egoal.darkestpixeldungeon"
     compileSdkVersion 35 //27 34 31 33 34 can use
 
 //    buildToolsVersion "27.0.3"

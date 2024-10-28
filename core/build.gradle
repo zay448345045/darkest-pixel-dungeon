@@ -59,6 +59,7 @@ buildFeatures {
 //compose = true
 dataBinding = true
 buildConfig = true
+prefab = true
 }
 }
 

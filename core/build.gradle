@@ -10,12 +10,12 @@ android {
 //    buildToolsVersion "27.0.3"
  
 
-//    ndkVersion "27.1.12297006"
+    ndkVersion "27.1.12297006"
 // #= '' 27
 
 
 
-ndkVersion '26.3.11579264'
+//ndkVersion '26.3.11579264'
 
 
 
@@ -87,6 +87,10 @@ implementation "org.koin:koin-android:2.0.1"
 }
 repositories {
     mavenCentral()
+maven { url         "https://dl.google.com/dl/android/maven2/"}
+
+
+maven { url         "https://repo.maven.apache.org/maven2/"}
 }
 
 

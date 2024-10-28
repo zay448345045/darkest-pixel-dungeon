@@ -2,12 +2,12 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
 android {
-    compileSdkVersion 32
+    compileSdkVersion 35 //32 27
  //   buildToolsVersion "27.0.3"
 
     defaultConfig {
         minSdkVersion 15
-        targetSdkVersion 32 //23
+        targetSdkVersion 35 //23
     }
 
 //    task ndkBuild(type: Exec) {

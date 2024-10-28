@@ -31,11 +31,13 @@ namespace "com.watabou" // 替换成你的包名
 //
 //    }
 //JavaVersion.VERSION_1_8
+
    compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
     }
-*/
+
+
 //    ndkVersion '26.1.10909125'
 
 

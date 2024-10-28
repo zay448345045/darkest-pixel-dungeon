@@ -55,6 +55,7 @@ dependencies {
 
 repositories {
     mavenCentral()
+google()
 maven { url         "https://dl.google.com/dl/android/maven2/"}
 
 

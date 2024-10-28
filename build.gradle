@@ -43,6 +43,12 @@ allprojects {
         maven {
             url "http://maven.aliyun.com/nexus/content/groups/public"
             allowInsecureProtocol = true
+//aliyun mirror does not have new plug-in versions.
+
+        google()
+        mavenCentral()
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+
         }
     }
 }

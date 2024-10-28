@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
 android {
-namespace "com.egoal.darkestpixeldungeon" // 替换成你的包名
+namespace "com.watabou" // 替换成你的包名
     compileSdkVersion 35 //32 27
  //   buildToolsVersion "27.0.3"
 

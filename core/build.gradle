@@ -87,10 +87,11 @@ implementation "org.koin:koin-android:2.0.1"
 }
 repositories {
     mavenCentral()
-maven { url         "https://dl.google.com/dl/android/maven2/"}
+    google()
+    google { url         "https://dl.google.com/dl/android/maven2/"}
 
 
-maven { url         "https://repo.maven.apache.org/maven2/"}
+    mavenCentral { url         "https://repo.maven.apache.org/maven2/"}
 }
 
 

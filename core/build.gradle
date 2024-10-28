@@ -101,6 +101,7 @@ implementation "org.koin:koin-android:2.0.1"
 */
 
 }
+/*
 dependencies {
 
     def composeBom = platform('androidx.compose:compose-bom:2024.09.00')
@@ -145,6 +146,7 @@ dependencies {
     implementation 'androidx.compose.runtime:runtime-rxjava2'
 
 }
+*/
 repositories {
     mavenCentral()
     google()

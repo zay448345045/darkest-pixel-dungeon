@@ -56,6 +56,9 @@ ndkVersion '27.1.12297006'
 
 buildFeatures {
         viewBinding true
+compose = true
+dataBinding = true
+buildConfig = true
 }
 }
 

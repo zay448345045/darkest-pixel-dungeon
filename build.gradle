@@ -1,5 +1,7 @@
 buildscript {
-    ext.kotlin_version = '1.5.20'
+ //   ext.kotlin_version = '1.5.20'
+   ext.kotlin_version = '2.0.20'
+
     repositories {
         maven {
             url "https://maven.aliyun.com/repository/google"
@@ -37,3 +39,17 @@ allprojects {
         }
     }
 }
+
+/*
+
+    ext.kotlin_version = '2.0.20'
+- 更新你的 Gradle version (`gradle-wrapper.properties`)
+  到 `7.5.1` 或者最新版本。
+- 更新你的 Kotlin version (`ext.kotlin_version`)
+  到 `1.7.22` 或者最新版本。
+- 更新你的 AGP version (`com.android.tools.build:gradle`)
+  或者 `7.2.2` 或者最新版本。
+
+
+
+*/

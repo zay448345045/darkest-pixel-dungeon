@@ -147,5 +147,8 @@ maven { url
   或者 `7.2.2` 或者最新版本。
 
 
-
+        gradlePluginPortal()
+plugins {
+    id("com.google.devtools.ksp") version com.knight.wanandroid.buildsrc.Dependencies.Version.ANDROID_KSP_VERSION
+}
 */

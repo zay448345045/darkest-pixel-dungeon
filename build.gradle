@@ -14,14 +14,16 @@ buildscript {
         }
         maven {
             url "http://maven.aliyun.com/nexus/content/groups/public"
-            allowInsecureProtocol = true
+            
+allowInsecureProtocol = true
+}
 //warning and notice . aliyun mirror does not have new plug-in versions.
 
 
 google()
         mavenCentral()
-        maven { url 'https://oss.sonatype.org/content/repositories/snapshots'
-        }
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots'}
+        
     }
     dependencies {
 /*

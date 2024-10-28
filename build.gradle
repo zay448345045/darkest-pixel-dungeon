@@ -4,6 +4,33 @@ buildscript {
    ext.kotlin_version = '2.0.20'
 
     repositories {
+mavenCentral()
+google()
+        
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots'}
+        
+    maven { url 
+"https://plugins.gradle.org/m2/"}
+    
+
+
+maven { url         "https://dl.google.com/dl/android/maven2/"}
+
+
+maven { url         "https://repo.maven.apache.org/maven2/"}
+
+
+
+
+
+
+
+
+
+
+
+
+
         maven {
             url "https://maven.aliyun.com/repository/google"
             allowInsecureProtocol = true
@@ -20,28 +47,24 @@ allowInsecureProtocol = true
 //warning and notice . aliyun mirror does not have new plug-in versions.
 
 
-google()
-        mavenCentral()
-        maven { url 'https://oss.sonatype.org/content/repositories/snapshots'}
-        
-    maven { url 
-"https://plugins.gradle.org/m2/"}
-    
 
-
-maven { url         "https://dl.google.com/dl/android/maven2/"}
-
-
-maven { url         "https://repo.maven.apache.org/maven2/"}
 
 }
+
+
+
+
+
     dependencies {
+
 /*
         classpath 'com.android.tools.build:gradle:4.0.1'
 */
 /*
 classpath 'com.android.tools.build:gradle:7.2.2'
 */
+
+
 classpath 'com.android.tools.build:gradle:8.6.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "org.jetbrains.kotlin:kotlin-serialization:$kotlin_version"
@@ -50,6 +73,25 @@ classpath 'com.android.tools.build:gradle:8.6.1'
 
 allprojects {
     repositories {
+
+google()
+        mavenCentral()
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots'
+ }
+maven { url         "https://dl.google.com/dl/android/maven2/"}
+
+
+maven { url         "https://repo.maven.apache.org/maven2/"}
+
+
+maven { url         
+"https://repo1.maven.org/"}
+
+
+
+
+
+
         maven {
             url "https://maven.aliyun.com/repository/google"
             allowInsecureProtocol = true
@@ -63,14 +105,7 @@ allprojects {
             allowInsecureProtocol = true
 //warning and notice . aliyun mirror does not have new plug-in versions.
 
-        google()
-        mavenCentral()
-        maven { url 'https://oss.sonatype.org/content/repositories/snapshots'
- }
-maven { url         "https://dl.google.com/dl/android/maven2/"}
-
-
-maven { url         "https://repo.maven.apache.org/maven2/"}
+        
         }
     }
 }

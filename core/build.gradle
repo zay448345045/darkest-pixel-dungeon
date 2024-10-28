@@ -5,7 +5,7 @@ apply plugin: 'kotlinx-serialization'
 
 
 android {
-    compileSdkVersion 31 //27 34 31 
+    compileSdkVersion 34 //27 34 31 33 can use
 //    buildToolsVersion "27.0.3"
 //        ndkVersion  27.1.12297006 
 //    ndkVersion "27.1.12297006"
@@ -17,7 +17,7 @@ ndkVersion '26.3.11579264'
 // #=
     defaultConfig {
         minSdkVersion 15
-        targetSdkVersion 31 //34 31 23
+        targetSdkVersion 34 //34 31 23 33
     }
 
     buildTypes {

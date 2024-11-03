@@ -1,6 +1,11 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
+apply plugin: 'java-library'
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+sourceCompatibility = targetCompatibility = appJavaCompatibility
+
+/*
 android {
 namespace "com.watabou" // 替换成你的包名
     compileSdkVersion 35 //32 27
@@ -52,12 +57,25 @@ ndkVersion '27.1.12297006'
 
 }
 
+*/
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+
+api "com.badlogicgames.gdx:gdx:$gdxVersion"
+    api "com.badlogicgames.gdx-controllers:gdx-controllers-core:$gdxControllersVersion"
+    implementation "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
+
+    //noinspection GradleDependency , later JSON versions cause crashes on old versions of android
+    implementation 'org.json:json:20170516'
+
+
+
+
+
 }
 
-
+/*
 repositories {
     mavenCentral()
 google()
@@ -66,3 +84,6 @@ maven { url         "https://dl.google.com/dl/android/maven2/"}
 
 maven { url         "https://repo.maven.apache.org/maven2/"}
 }
+
+
+*/

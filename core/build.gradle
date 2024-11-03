@@ -63,12 +63,13 @@ minSdkVersion appAndroidMinSDK//33//appAndroidMinSDK
      //       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
 
 
-// **
+// *
+/*
 dependencies {
                 releaseImplementation project(':services:updates:githubUpdates')
                 releaseImplementation project(':services:news:ingameNews')
             }
-
+*/
             }
 /*
 sourceSets {
@@ -83,10 +84,12 @@ sourceSets {
 debug {
             applicationIdSuffix ".indev"
             versionNameSuffix '-INDEV'
+/*
             dependencies {
                 debugImplementation project(':services:updates:githubUpdates')
                 debugImplementation project(':services:news:ingameNews')
             }
+*/
         }
     }
 

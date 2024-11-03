@@ -243,12 +243,23 @@ dependencies {
 repositories {
     mavenCentral()
     google()
+
+/*
     maven { url         "https://dl.google.com/dl/android/maven2/"}
+
+
+*/
+maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+  
 
 }
 
 /*
     mavenCentral { url         "https://repo.maven.apache.org/maven2/"}
+
+
+maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+  
 }
 
 

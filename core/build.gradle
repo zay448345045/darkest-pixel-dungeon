@@ -65,6 +65,7 @@ dependencies {
                 releaseImplementation project(':services:news:ingameNews')
             }
 
+            }
 /*
 sourceSets {
         main {

@@ -35,7 +35,10 @@ compileOptions.sourceCompatibility = compileOptions.targetCompatibility = appJav
   //      kotlinVersion  "2.0.21" 
 // #=
     defaultConfig {
+
+/*
 manifestPlaceholders = [appName:appName]
+*/
         applicationId appPackageName
 
         versionCode appVersionCode

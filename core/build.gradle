@@ -46,8 +46,10 @@ compileOptions.sourceCompatibility = compileOptions.targetCompatibility = appJav
 */
 
 // **
+/*
 minSdkVersion appAndroidMinSDK//33//appAndroidMinSDK
         targetSdkVersion appAndroidTargetSDK//33//appAndroidTargetSDK
+*/
         resourceConfigurations += ['en_US', 'zh_CN']
         resConfigs 'en_US', "zh", "nl", "uk", "vi", "el"
 

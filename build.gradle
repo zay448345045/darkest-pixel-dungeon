@@ -80,14 +80,35 @@ classpath 'com.android.tools.build:gradle:8.7.2'
 
 allprojects {
     repositories {
+ext {
+        appName = 'Darkest Pixel Dungeon'
+/*
+namespace "com.egoal.darkestpixeldungeon" 
+    android:versionCode="49"
+    android:versionName="0.7.1">
+*/
 
+        appPackageName = 'com.egoal.darkestpixeldungeon'
+
+        appVersionCode = 49
+        appVersionName = '0.7.1'
+
+        appJavaCompatibility = JavaVersion.VERSION_1_8
+
+        appAndroidCompileSDK = 35 //compile SDK is still 33 atm as we're sticking with AGP 8.0.2
+        appAndroidMinSDK = 14
+        appAndroidTargetSDK = 35
+
+        gdxVersion = '1.12.1'
+        gdxControllersVersion = '2.2.4-SNAPSHOT'
+        robovmVersion = '2.3.21'
+    }
+    version = appVersionName
 
 google()
 jcenter()
         mavenCentral()
-
-
-maven { url         "https://dl.google.com/dl/android/maven2/"}
+maven { url 'https://oss.sonatype.org/content/repositories/snapshots'
 
 
 }
@@ -97,6 +118,8 @@ maven { url         "https://dl.google.com/dl/android/maven2/"}
         maven { url 'https://oss.sonatype.org/content/repositories/snapshots'
  }
 
+
+maven { url         "https://dl.google.com/dl/android/maven2/"}
 
 
 

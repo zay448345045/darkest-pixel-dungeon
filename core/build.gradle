@@ -38,11 +38,12 @@ compileOptions.sourceCompatibility = compileOptions.targetCompatibility = appJav
 
 /*
 manifestPlaceholders = [appName:appName]
-*/
+
         applicationId appPackageName
 
         versionCode appVersionCode
         versionName appVersionName
+/*
         minSdkVersion 15
         targetSdkVersion 35 //34 31 23 33 34
 

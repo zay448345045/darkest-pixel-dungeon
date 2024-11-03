@@ -35,6 +35,11 @@ compileOptions.sourceCompatibility = compileOptions.targetCompatibility = appJav
   //      kotlinVersion  "2.0.21" 
 // #=
     defaultConfig {
+manifestPlaceholders = [appName:appName]
+        applicationId appPackageName
+
+        versionCode appVersionCode
+        versionName appVersionName
         minSdkVersion 15
         targetSdkVersion 35 //34 31 23 33 34
 
@@ -124,6 +129,43 @@ dependencies {
 
     implementation "org.jetbrains.kotlin:kotlin-reflect:1.6.21"
 
+
+implementation "com.badlogicgames.gdx:gdx-backend-android:$gdxVersion"
+    natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-armeabi-v7a"
+    natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86"
+    natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-arm64-v8a"
+    natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86_64"
+    implementation "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
+    natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-armeabi-v7a"
+    natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-arm64-v8a"
+    natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-x86"
+    natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-x86_64"
+    implementation "com.badlogicgames.gdx-controllers:gdx-controllers-android:2.2.3"
+    implementation "com.github.RohitSurwase.UCE-Handler:uce_handler:1.4"
+
+
+}
+task copyAndroidNatives() {
+    file("libs/armeabi-v7a/").mkdirs()
+    file("libs/arm64-v8a/").mkdirs()
+    file("libs/x86/").mkdirs()
+    file("libs/x86_64/").mkdirs()
+
+    configurations.natives.copy().files.each { jar ->
+        def outputDir = null
+        if(jar.name.endsWith("natives-armeabi-v7a.jar")) outputDir = file("libs/armeabi-v7a")
+        if(jar.name.endsWith("natives-arm64-v8a.jar")) outputDir = file("libs/arm64-v8a")
+        if(jar.name.endsWith("natives-x86.jar")) outputDir = file("libs/x86")
+        if(jar.name.endsWith("natives-x86_64.jar")) outputDir = file("libs/x86_64")
+        if(outputDir != null) {
+            copy {
+                from zipTree(jar)
+                into outputDir
+                include "*.so"
+            }
+        }
+    }
+}
 /*
 
     implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:$kotlinxSerializationVersion"
@@ -151,7 +193,7 @@ implementation "org.koin:koin-android:2.0.1"
     api("org.jetbrains.kotlinx:kotlinx-serialization-json:$kotlinxSerializationVersion")
 */
 
-}
+
 /*
 dependencies {
 

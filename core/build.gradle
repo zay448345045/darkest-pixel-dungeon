@@ -38,12 +38,12 @@ compileOptions.sourceCompatibility = compileOptions.targetCompatibility = appJav
         minSdkVersion 15
         targetSdkVersion 35 //34 31 23 33 34
 
-manifestPlaceholders = [appName:appName]
-        applicationId appPackageName
+/*manifestPlaceholders = [appName:appName]
+        applicationId appPackageNamedelate com.ddd
 
-        versionCode appVersionCode
-        versionName appVersionName
-
+        versionCode appVersionCodedelate 1
+        versionName appVersionName1delate 1
+*/
 
 // **
 minSdkVersion appAndroidMinSDK//33//appAndroidMinSDK

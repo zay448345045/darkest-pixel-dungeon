@@ -3,7 +3,8 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
 apply plugin: 'java-library'
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
-sourceCompatibility = targetCompatibility = appJavaCompatibility
+sourceCompatibility = targetCompatibility
+ //= appJavaCompatibility
 
 /*
 android {

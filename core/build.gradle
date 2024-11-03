@@ -25,6 +25,9 @@ namespace "com.egoal.darkestpixeldungeon"
     ndkVersion "27.1.12297006"
 // #= '' 27 '26.3.11579264'
 
+compileOptions.sourceCompatibility = compileOptions.targetCompatibility = appJavaCompatibility
+
+    sourceSets.main.assets.srcDirs = [new File(project(':core').projectDir, "/src/main/assets")]
 
 
   //      kotlinVersion  "2.0.21" 
@@ -32,6 +35,21 @@ namespace "com.egoal.darkestpixeldungeon"
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 35 //34 31 23 33 34
+
+manifestPlaceholders = [appName:appName]
+        applicationId appPackageName
+
+        versionCode appVersionCode
+        versionName appVersionName
+
+
+// **
+minSdkVersion appAndroidMinSDK//33//appAndroidMinSDK
+        targetSdkVersion appAndroidTargetSDK//33//appAndroidTargetSDK
+        resourceConfigurations += ['en_US', 'zh_CN']
+        resConfigs 'en_US', "zh", "nl", "uk", "vi", "el"
+
+// **
     }
 
     buildTypes {
@@ -39,6 +57,31 @@ namespace "com.egoal.darkestpixeldungeon"
             shrinkResources false
             minifyEnabled false
      //       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+
+// **
+dependencies {
+                releaseImplementation project(':services:updates:githubUpdates')
+                releaseImplementation project(':services:news:ingameNews')
+            }
+
+/*
+sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+*/
+
+
+
+
+
+debug {
+            applicationIdSuffix ".indev"
+            versionNameSuffix '-INDEV'
+            dependencies {
+                debugImplementation project(':services:updates:githubUpdates')
+                debugImplementation project(':services:news:ingameNews')
+            }
         }
     }
 

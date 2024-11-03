@@ -108,7 +108,7 @@ namespace "com.egoal.darkestpixeldungeon"
 google()
 jcenter()
         mavenCentral()
-maven { url 'https://oss.sonatype.org/content/repositories/snapshots'
+maven { url 'https://oss.sonatype.org/content/repositories/snapshots'}
 
 
 }

@@ -28,8 +28,10 @@
         android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
         <activity
             
-            android:name=".DarkestPixelDungeon"
+            
+android:name=".DarkestPixelDungeon"
            
+
 android:exported="true"
  
 android:configChanges="keyboardHidden|orientation|screenSize"

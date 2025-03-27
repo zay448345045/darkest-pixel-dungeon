@@ -158,23 +158,7 @@ task copyAndroidNatives() {
     file("libs/x86_64/").mkdirs()
 
     
-/*
-configurations.implementation.copy().files.each { jar ->
-        def outputDir = null
-        if(jar.name.endsWith("natives-armeabi-v7a.jar")) outputDir = file("libs/armeabi-v7a")
-        if(jar.name.endsWith("natives-arm64-v8a.jar")) outputDir = file("libs/arm64-v8a")
-        if(jar.name.endsWith("natives-x86.jar")) outputDir = file("libs/x86")
-        if(jar.name.endsWith("natives-x86_64.jar")) outputDir = file("libs/x86_64")
-        if(outputDir != null) {
-            copy {
-                from zipTree(jar)
-                into outputDir
-                include "*.so"
-            }
-        }
-    }
-}
-*/
+
 // 创建一个自定义任务，用于复制 .so 文件
 task copyNativeLibs {
     doLast {
@@ -198,6 +182,23 @@ task copyNativeLibs {
 // 将自定义任务添加到构建流程中，确保在编译之前执行
 preBuild.dependsOn copyNativeLibs
 /*
+configurations.implementation.copy().files.each { jar ->
+        def outputDir = null
+        if(jar.name.endsWith("natives-armeabi-v7a.jar")) outputDir = file("libs/armeabi-v7a")
+        if(jar.name.endsWith("natives-arm64-v8a.jar")) outputDir = file("libs/arm64-v8a")
+        if(jar.name.endsWith("natives-x86.jar")) outputDir = file("libs/x86")
+        if(jar.name.endsWith("natives-x86_64.jar")) outputDir = file("libs/x86_64")
+        if(outputDir != null) {
+            copy {
+                from zipTree(jar)
+                into outputDir
+                include "*.so"
+            }
+        }
+    }
+}
+
+
 
 
     implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:$kotlinxSerializationVersion"
@@ -223,10 +224,10 @@ implementation "org.koin:koin-android:2.0.1"
 
 
     api("org.jetbrains.kotlinx:kotlinx-serialization-json:$kotlinxSerializationVersion")
-*/
 
 
-/*
+
+
 dependencies {
 
     def composeBom = platform('androidx.compose:compose-bom:2024.09.00')
@@ -271,8 +272,8 @@ dependencies {
     implementation 'androidx.compose.runtime:runtime-rxjava2'
 
 }
-*/
-/*
+
+
 repositories {
     mavenCentral()
     google()
@@ -286,14 +287,15 @@ maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
   
 
 }
-*/
-/*
+
+
     mavenCentral { url         "https://repo.maven.apache.org/maven2/"}
 
 
 maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
   
 }
+
 
 
 */

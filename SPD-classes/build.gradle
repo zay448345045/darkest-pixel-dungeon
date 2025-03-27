@@ -7,7 +7,7 @@ apply plugin: 'java-library'
 sourceCompatibility = targetCompatibility
  //= appJavaCompatibility
 
-/*
+
 android {
 namespace "com.watabou" // 替换成你的包名
     compileSdkVersion 35 //32 27
@@ -40,8 +40,8 @@ namespace "com.watabou" // 替换成你的包名
 //JavaVersion.VERSION_1_8
 
    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_17
-        targetCompatibility JavaVersion.VERSION_17
+        sourceCompatibility JavaVersion.VERSION_23
+        targetCompatibility JavaVersion.VERSION_23
     }
 
 
@@ -49,7 +49,7 @@ namespace "com.watabou" // 替换成你的包名
 
 
 
-ndkVersion '27.1.12297006'
+//ndkVersion '27.1.12297006'
 
 
 
@@ -59,7 +59,7 @@ ndkVersion '27.1.12297006'
 
 }
 
-*/
+
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
